@@ -34,11 +34,10 @@ group :development, :test do
   ##### Testing #####
   gem 'rspec-rails'
   gem 'spring'
+  gem 'factory_girl_rails'
 end
-
 
 group :test do
   gem 'database_cleaner'
-  gem 'vcr'
-  gem 'webmock'
+  gem 'shoulda-matchers'
 end
