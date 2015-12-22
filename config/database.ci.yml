@@ -1,0 +1,6 @@
+test:
+  database: circle_twtb_test.sqlite3
+  adapter:  sqlite3
+  encoding: utf8
+  charset:  utf8
+  pool:     5
