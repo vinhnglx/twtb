@@ -74,13 +74,13 @@ RSpec.describe News, type: :model do
   context 'scopes' do
     describe '.latest_by_tech' do
       before do
-        (1..15).each do |i|
+        (1..15).each do
           tech = ['ruby', 'rust', 'go', 'javascript', 'html', 'css'].sample
           create(:news, tech: tech)
         end
       end
 
-      it "returns latest news" do
+      it 'returns latest news' do
         latest_ruby = News.where(tech: 'ruby').order('created_at desc')
         expect(News.latest_by_tech('ruby')).to match_array latest_ruby
       end
