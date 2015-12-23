@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring'
   gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :test do
