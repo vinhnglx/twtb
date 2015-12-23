@@ -23,4 +23,5 @@ class News < ActiveRecord::Base
   # Scopes
   #
   scope :latest_by_tech, ->(tech) { where(tech: tech).order('created_at desc') }
+  scope :latest, -> { order('created_at desc') }
 end
