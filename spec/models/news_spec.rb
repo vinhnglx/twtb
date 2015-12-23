@@ -14,8 +14,7 @@
 require 'rails_helper'
 
 RSpec.describe News, type: :model do
-
-  context "attributes" do
+  context 'attributes' do
     it 'has author' do
       expect(build(:news, author: 'John Doe')).to have_attributes(author: 'John Doe')
     end
@@ -33,7 +32,7 @@ RSpec.describe News, type: :model do
     end
   end
 
-  context "validations" do
+  context 'validations' do
     let(:news) { create(:news) }
 
     it 'requires title' do
@@ -56,5 +55,4 @@ RSpec.describe News, type: :model do
       it { should allow_value('http://foo.com').for(:source) }
     end
   end
-
 end
