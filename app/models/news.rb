@@ -12,4 +12,11 @@
 #
 
 class News < ActiveRecord::Base
+
+  # Validation: Listing validations
+  #
+  validates :author, :title, :desc, :source, presence: true
+  validates_format_of :source, with: URI.regexp
+  validates_uniqueness_of :source
+
 end
