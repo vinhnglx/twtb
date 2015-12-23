@@ -14,9 +14,8 @@
 FactoryGirl.define do
   factory :news do
     author { FFaker::Name.name }
-    sequence(:title)    { |n| "Example#{n}" }
+    sequence(:title) { |n| "Example#{n}" }
     desc { FFaker::Lorem.paragraph }
     source { FFaker::Internet.http_url }
   end
-
 end
